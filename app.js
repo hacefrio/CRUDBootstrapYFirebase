@@ -23,6 +23,10 @@ function guardar() {
         .catch(function (error) {
             console.error("Error adding document: ", error);
         });
+    document.getElementById('nombre').value = '';
+    document.getElementById('ano').value = '';
+    document.getElementById('artista').value = '';
+    document.getElementById('unidadesVendidas').value = '';
 }
 
 //Mostrar datos
@@ -79,7 +83,7 @@ function modificar(id, ano, artista, nombre, unidadesVendidas) {
             unidadesVendidas: unidadesVendidas
 
         })
-        
+
             .then(function () {
                 console.log("Document successfully updated!");
             })
@@ -92,7 +96,7 @@ function modificar(id, ano, artista, nombre, unidadesVendidas) {
             document.getElementById('nombre').value = '',
             document.getElementById('ano').value = '',
             document.getElementById('artista').value = '',
-            document.getElementById('unidadesVendidas').value = '' ;
+            document.getElementById('unidadesVendidas').value = '';
 
 
     }
